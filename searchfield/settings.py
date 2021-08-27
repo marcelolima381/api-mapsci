@@ -133,9 +133,9 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 CORS_ALLOWED_ORIGINS = [
-    "https://localhost:3000/",
-    "http://localhost:3000/",
-    "https://vibrant-euclid-df9cfd.netlify.app/",
+    "https://localhost:3000",
+    "http://localhost:3000",
+    "https://vibrant-euclid-df9cfd.netlify.app",
 ]
 
 django_heroku.settings(locals())
