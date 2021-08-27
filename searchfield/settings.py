@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-uwrkgt5*16s#%^7&6n44y5j(xs)o11sjuna3we0_@61q6t$)8!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -132,14 +132,16 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+CORS_ALLOWED_ORIGINS = [
+    "https://localhost:3000",
+    "http://localhost:3000",
+    "https://vibrant-euclid-df9cfd.netlify.app",
+]
 
-CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ALLOWED_ORIGINS = [
-#     "https://localhost:3000",
-#     "http://localhost:3000",
-#     "https://127.0.0.1:3000",
-#     "http://127.0.0.1:3000",
-#     "https://vibrant-euclid-df9cfd.netlify.app",
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    "localhost:3000",
+    "localhost:3000",
+    "vibrant-euclid-df9cfd.netlify.app",
+]
 
 django_heroku.settings(locals())
